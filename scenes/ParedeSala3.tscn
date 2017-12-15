@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://assets/puzzles/s3 puzzle armario2.png" type="Texture" id=1]
+[ext_resource path="res://assets/panel.png" type="Texture" id=2]
+[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=3]
+[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.fnt" type="BitmapFont" id=5]
+
+[node name="ParedeSala3" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 0.18, 0.18 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 191.0
+margin/top = 28.0
+margin/right = 3560.0
+margin/bottom = 2125.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+[node name="Panel" type="Patch9Frame" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 28.0
+margin/top = 421.0
+margin/right = 991.0
+margin/bottom = 584.0
+texture = ExtResource( 2 )
+patch_margin/left = 20
+patch_margin/top = 4
+patch_margin/right = 20
+patch_margin/bottom = 4
+
+[node name="TIE" type="ReferenceFrame" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 942.0
+margin/bottom = 147.0
+script/script = ExtResource( 3 )
+__meta__ = {
+"_editor_icon": ExtResource( 4 )
+}
+SCROLL_ON_MAX_LINES = true
+BREAK_ON_MAX_LINES = true
+AUTO_SKIP_WORDS = true
+LOG_SKIPPED_LINES = true
+SCROLL_SKIPPED_LINES = false
+FONT = ExtResource( 5 )
+PRINT_INPUT = true
+BLINKING_INPUT = true
+INPUT_CHARACTERS_LIMIT = -1
+
+[node name="Control" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+

@@ -1,0 +1,704 @@
+[gd_scene load_steps=25 format=1]
+
+[ext_resource path="res://scripts/Corredor2.gd" type="Script" id=1]
+[ext_resource path="res://scenes/meshes/corredor2.scn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/meshes/monster1.scn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/meshes/MONSTER2.scn" type="PackedScene" id=4]
+[ext_resource path="res://assets/panel.png" type="Texture" id=5]
+[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=6]
+[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=7]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.fnt" type="BitmapFont" id=8]
+[ext_resource path="res://scenes/meshes/hakuTrue.scn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/camera.gd" type="Script" id=10]
+[ext_resource path="res://addons/SMRT/dialog.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.TTF" type="DynamicFontData" id=12]
+[ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/meshes/colar.msh" type="Mesh" id=14]
+
+[sub_resource type="Environment" id=1]
+
+ambient_light/enabled = true
+ambient_light/color = Color( 0.196078, 0.184314, 0.12549, 1 )
+ambient_light/energy = 1.0
+fxaa/enabled = false
+background/mode = 1
+background/color = Color( 0, 0, 0, 1 )
+background/energy = 1.0
+background/scale = 1.0
+background/glow = 0.0
+background/canvas_max_layer = null
+glow/enabled = false
+glow/blur_passes = 1
+glow/blur_scale = 1
+glow/blur_strength = 1
+glow/blur_blend_mode = null
+glow/bloom = 0.0
+glow/bloom_treshold = 0.5
+dof_blur/enabled = false
+dof_blur/blur_passes = 1
+dof_blur/begin = 100.0
+dof_blur/range = 10.0
+hdr/enabled = false
+hdr/tonemapper = 0
+hdr/exposure = 0.4
+hdr/white = 1.0
+hdr/glow_treshold = 0.95
+hdr/glow_scale = 0.2
+hdr/min_luminance = 0.4
+hdr/max_luminance = 8.0
+hdr/exposure_adj_speed = 0.5
+fog/enabled = false
+fog/begin = 100.0
+fog/begin_color = Color( 0, 0, 0, 1 )
+fog/end_color = Color( 0, 0, 0, 1 )
+fog/attenuation = 1.0
+fog/bg = true
+bcs/enabled = false
+bcs/brightness = 1.0
+bcs/contrast = 1.0
+bcs/saturation = 1.0
+srgb/enabled = false
+
+[sub_resource type="BoxShape" id=2]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="BoxShape" id=3]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="BoxShape" id=4]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="BoxShape" id=5]
+
+extents = Vector3( 9.54787, 1, 1 )
+
+[sub_resource type="BoxShape" id=6]
+
+extents = Vector3( 1.44816, 1, 1.4343 )
+
+[sub_resource type="BoxShape" id=7]
+
+extents = Vector3( 14.7423, 1, 1.07892 )
+
+[sub_resource type="BoxShape" id=8]
+
+extents = Vector3( 7.51108, 1, 1.07892 )
+
+[sub_resource type="BoxShape" id=9]
+
+extents = Vector3( 1.97206, 0.689302, 1.42602 )
+
+[sub_resource type="DynamicFont" id=10]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 12 )
+
+[node name="Corredor2" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+environment = SubResource( 1 )
+
+[node name="corredor2" parent="." instance=ExtResource( 2 )]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.687908, -0.327426, 0.647747, -0.143858, 0.813246, 0.563859, -0.711398, -0.481066, 0.512335, 13.9326, 54.7869, 0 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 0.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="Monsters" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="monster1" parent="Monsters" instance=ExtResource( 3 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1883, -3.77349, 6.93426 )
+
+[node name="AreaTalk" type="Area" parent="Monsters/monster1"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0493727, 1.31018, -0.217537 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 6.17735, 0, 0, 0, 6.17735, 0, 0, 0, 6.17735, -0.00517464, 4.74871, 0.413785 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionHit" type="CollisionShape" parent="Monsters/monster1/AreaTalk"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 6.17735, 0, 0, 0, 6.17735, 0, 0, 0, 6.17735, -0.00517464, 4.74871, 0.413785 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="AreaHit" type="Area" parent="Monsters/monster1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1.14893, 0, 0, 0, 1.14893, 0, 0, 0, 1.14893, 0, 1.31018, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 6.83252, 0, 0, 0, 6.83252, 0, 0, 0, 6.83252, -0.00517464, 4.74871, 0.413785 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionHit" type="CollisionShape" parent="Monsters/monster1/AreaHit"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 6.83252, 0, 0, 0, 6.83252, 0, 0, 0, 6.83252, -0.00517464, 4.74871, 0.413785 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="AreaDanger" type="Area" parent="Monsters/monster1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 4.43045, 0, 0, 0, 4.43045, 0, 0, 0, 4.43045, -0.00517464, 6.05889, 0.413785 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionDanger" type="CollisionShape" parent="Monsters/monster1/AreaDanger"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.43045, 0, 0, 0, 4.43045, 0, 0, 0, 4.43045, -0.00517464, 6.05889, 0.413785 )
+shape = SubResource( 3 )
+trigger = true
+_update_shape_index = 0
+
+[node name="CollisionShape 2" type="CollisionShape" parent="Monsters/monster1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 3.22965, 0, 0, 0, 3.22965, 0, 0, 0, 3.22965, 0, 3.57246, 0 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 1
+
+[node name="monster2" parent="Monsters" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1.69292, 0, 0, 0, 1.69292, 0, 0, 0, 1.69292, -59.176, -6.84831, -2.64261 )
+
+[node name="AreaHit" type="Area" parent="Monsters/monster2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.772027, 0, 0, 0, 0.772027, 0, 0, 0, 0.772027, 2.23768, 1.56371, -1.83262 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 6.17735, 0, 0, 0, 6.17735, 0, 0, 0, 6.17735, -0.00517464, 4.74871, 0.413785 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionHit" type="CollisionShape" parent="Monsters/monster2/AreaHit"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 6.17735, 0, 0, 0, 6.17735, 0, 0, 0, 6.17735, -0.00517464, 4.74871, 0.413785 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="AreaTalk" type="Area" parent="Monsters/monster2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.772027, 0, 0, 0, 0.772027, 0, 0, 0, 0.772027, 2.23768, 1.56371, -1.83262 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 6.17735, 0, 0, 0, 6.17735, 0, 0, 0, 6.17735, -0.00517464, 4.74871, 0.413785 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionHit" type="CollisionShape" parent="Monsters/monster2/AreaTalk"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 6.17735, 0, 0, 0, 6.17735, 0, 0, 0, 6.17735, -0.00517464, 4.74871, 0.413785 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Panel" type="Patch9Frame" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 28.0
+margin/top = 421.0
+margin/right = 991.0
+margin/bottom = 584.0
+texture = ExtResource( 5 )
+patch_margin/left = 20
+patch_margin/top = 4
+patch_margin/right = 20
+patch_margin/bottom = 4
+
+[node name="TIE" type="ReferenceFrame" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 942.0
+margin/bottom = 147.0
+script/script = ExtResource( 6 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+SCROLL_ON_MAX_LINES = true
+BREAK_ON_MAX_LINES = true
+AUTO_SKIP_WORDS = true
+LOG_SKIPPED_LINES = true
+SCROLL_SKIPPED_LINES = false
+FONT = ExtResource( 8 )
+PRINT_INPUT = true
+BLINKING_INPUT = true
+INPUT_CHARACTERS_LIMIT = -1
+
+[node name="Haku" parent="." instance=ExtResource( 9 )]
+
+editor/display_folded = true
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.2592, -1.72326, 14.18 )
+
+[node name="Camera" type="Camera" parent="Haku"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.663414, -0.383022, 0.642788, 0.0252013, 0.870002, 0.492404, -0.747828, -0.310468, 0.586824, 46.3409, 40.6939, 41.2929 )
+projection = 1
+size = 45.0
+near = 0.11
+far = 200.0
+keep_aspect = 1
+current = false
+visible_layers = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+script/script = ExtResource( 10 )
+
+[node name="Areas" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.3763, 0, 0 )
+
+[node name="AreaCorredor1" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.27572, -7.48462 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaCorredor1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.27572, -7.48462 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaSala1" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -138.44, -4.27572, 13.569 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaSala1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -138.44, -4.27572, 13.569 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPlanta1" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2914, 0, 0.652588 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Transform( 2.6611, 0, 0, 0, 2.6611, 0, 0, 0, 2.6611, -2.53291, -2.84493, -3.95437 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPlanta1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 2.6611, 0, 0, 0, 2.6611, 0, 0, 0, 2.6611, -2.53291, -2.84493, -3.95437 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPlanta2" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -130.688, 0, 0.967041 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Transform( 2.6611, 0, 0, 0, 2.6611, 0, 0, 0, 2.6611, -2.53291, -2.84493, -3.95437 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPlanta2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 2.6611, 0, 0, 0, 2.6611, 0, 0, 0, 2.6611, -2.53291, -2.84493, -3.95437 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaArina" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.74463, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 2
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91794, 0, 7.55941 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 8 )
+shapes/1/transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -8.017, 0, 0.198094 )
+shapes/1/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaArina"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91794, 0, 7.55941 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape1" type="CollisionShape" parent="Areas/AreaArina"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -8.017, 0, 0.198094 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 1
+
+[node name="AreaColar" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.55534, -5.5814, 18.1563 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaColar"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.55534, -5.5814, 18.1563 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="dialog" parent="Canvas" instance=ExtResource( 11 )]
+
+margin/left = 31.0
+margin/top = 412.0
+margin/right = 30.0
+margin/bottom = 40.0
+texture = ExtResource( 5 )
+patch_margin/left = 20
+patch_margin/right = 20
+language = "res://corredor2.lan"
+font = SubResource( 10 )
+font_size = 20
+dialog_frame_height = 3
+
+[node name="Inventory" parent="." instance=ExtResource( 13 )]
+
+editor/display_folded = true
+
+[node name="Message" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Label" type="Label" parent="Message"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 295.0
+margin/top = 271.0
+margin/right = 700.0
+margin/bottom = 347.0
+custom_fonts/font = ExtResource( 8 )
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = false
+
+[node name="Colar" type="MeshInstance" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.3, 73.9611, -7.01807, 17.8534 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 14 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[connection signal="body_enter" from="Monsters/monster1/AreaTalk" to="." method="_on_AreaTalkMonster1_body_enter"]
+
+[connection signal="body_exit" from="Monsters/monster1/AreaTalk" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Monsters/monster1/AreaHit" to="." method="_on_AreaHitMonster1_body_enter"]
+
+[connection signal="body_exit" from="Monsters/monster1/AreaHit" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Monsters/monster1/AreaDanger" to="." method="_on_AreaDanger_body_enter"]
+
+[connection signal="body_enter" from="Monsters/monster2/AreaHit" to="." method="_on_AreaHitMonster2_body_enter"]
+
+[connection signal="body_exit" from="Monsters/monster2/AreaHit" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Monsters/monster2/AreaTalk" to="." method="_on_AreaTalk_body_enter"]
+
+[connection signal="body_exit" from="Monsters/monster2/AreaTalk" to="." method="_on_Area_body_exit"]
+
+[connection signal="buff_end" from="Panel/TIE" to="." method="_on_TIE_buff_end"]
+
+[connection signal="body_enter" from="Areas/AreaCorredor1" to="." method="_on_AreaCorredor1_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaSala1" to="." method="_on_AreaSala1_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaPlanta1" to="." method="_on_AreaPlanta_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPlanta1" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaPlanta2" to="." method="_on_AreaPlanta_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPlanta2" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaArina" to="." method="_on_AreaArina_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaArina" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaColar" to="." method="_on_AreaColar_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaColar" to="." method="_on_Area_body_exit"]
+
+[connection signal="dialog_control" from="Canvas/dialog" to="." method="_on_dialog_dialog_control"]
+
+[connection signal="finished" from="Canvas/dialog" to="." method="_on_dialog_finished"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

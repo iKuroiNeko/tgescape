@@ -1,0 +1,845 @@
+[gd_scene load_steps=38 format=1]
+
+[ext_resource path="res://scripts/Sala3.gd" type="Script" id=1]
+[ext_resource path="res://scenes/meshes/hakuTrue.scn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/camera.gd" type="Script" id=3]
+[ext_resource path="res://scenes/meshes/sala3.scn" type="PackedScene" id=4]
+[ext_resource path="res://assets/panel.png" type="Texture" id=5]
+[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=6]
+[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=7]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.fnt" type="BitmapFont" id=8]
+[ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/puzzleLife.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scripts/puzzleSenhaSala3.gd" type="Script" id=11]
+[ext_resource path="res://scenes/puzzleArmario1Sala3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/puzzleArmario2Sala3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Piano.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/parede.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/meshes/hanaga2.scn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Expression.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/meshes/FEI.scn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/meshes/arina.scn" type="PackedScene" id=19]
+[ext_resource path="res://addons/SMRT/dialog.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.TTF" type="DynamicFontData" id=21]
+
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 3.60568, 8.33375, 6.16571 )
+
+[sub_resource type="BoxShape" id=2]
+
+extents = Vector3( 3.90127, 8.33375, 5.91605 )
+
+[sub_resource type="BoxShape" id=3]
+
+extents = Vector3( 4.42496, 3.13282, 2.99128 )
+
+[sub_resource type="BoxShape" id=4]
+
+extents = Vector3( 1.81954, 5.01768, 3.736 )
+
+[sub_resource type="BoxShape" id=5]
+
+extents = Vector3( 5.46132, 3.32198, 5.16607 )
+
+[sub_resource type="BoxShape" id=6]
+
+extents = Vector3( 2.80358, 4.40079, 2.87609 )
+
+[sub_resource type="BoxShape" id=7]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="BoxShape" id=8]
+
+extents = Vector3( 3.46842, 4.68946, 6.97774 )
+
+[sub_resource type="BoxShape" id=9]
+
+extents = Vector3( 0.670038, 3.8999, 2.50936 )
+
+[sub_resource type="BoxShape" id=10]
+
+extents = Vector3( 2.64948, 9.36782, 8.59907 )
+
+[sub_resource type="BoxShape" id=11]
+
+extents = Vector3( 2.87603, 9.65097, 9.3584 )
+
+[sub_resource type="BoxShape" id=12]
+
+extents = Vector3( 2.57546, 1.66287, 0.235913 )
+
+[sub_resource type="BoxShape" id=13]
+
+extents = Vector3( 1, 1, 0.704038 )
+
+[sub_resource type="BoxShape" id=14]
+
+extents = Vector3( 2.65369, 6.43015, 3.45717 )
+
+[sub_resource type="BoxShape" id=15]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=16]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 21 )
+
+[node name="Sala3" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.687908, -0.327426, 0.647747, -0.143858, 0.813246, 0.563859, -0.711398, -0.481066, 0.512335, 13.9326, 54.7869, 0 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 0.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="Haku" parent="." instance=ExtResource( 2 )]
+
+editor/display_folded = true
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, -0.3, -22 )
+
+[node name="Camera" type="Camera" parent="Haku"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.663414, -0.383022, 0.642788, 0.0252013, 0.870002, 0.492404, -0.747828, -0.310468, 0.586824, 46.3409, 40.6939, 41.2929 )
+projection = 1
+size = 45.0
+near = 0.11
+far = 200.0
+keep_aspect = 1
+current = false
+visible_layers = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+script/script = ExtResource( 3 )
+
+[node name="sala3" parent="." instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.6665, 0 )
+
+[node name="Areas" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.87901, 0 )
+
+[node name="AreaArmario1" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6868, 4.11349, -3.461 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Transform( 0.912131, 0, 0, 0, 0.912131, 0, 0, 0, 0.912131, -1.98763, 3.99419, -3.72971 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaArmario1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.912131, 0, 0, 0, 0.912131, 0, 0, 0, 0.912131, -1.98763, 3.99419, -3.72971 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaArmario2" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 0.912131, 0, 0, 0, 0.912131, 0, 0, 0, 0.912131, -32.042, 8.10768, 5.87107 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaArmario2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.912131, 0, 0, 0, 0.912131, 0, 0, 0, 0.912131, -32.042, 8.10768, 5.87107 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPlanta" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5885, 3.38038, 33.5036 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.211, 0.113083, -2.90619 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPlanta"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.211, 0.113083, -2.90619 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPiano" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48306, 1.31919, 23.9751 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33989, 4.41212, -2.84636 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPiano"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33989, 4.41212, -2.84636 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaMesa" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.61923, 2.19776, -8.54095 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73061, 1.65682, 2.10897 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaMesa"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73061, 1.65682, 2.10897 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaMonitor" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5301, 4.67142, -33.6193 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228432, 0.236205, 0.443878 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaMonitor"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228432, 0.236205, 0.443878 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPapel" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.223, 0, -25.17 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Transform( 3.12888, 0, 0, 0, 3.12888, 0, 0, 0, 3.12888, 3.04697, 2.93073, -1.7677 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPapel"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 3.12888, 0, 0, 0, 3.12888, 0, 0, 0, 3.12888, 3.04697, 2.93073, -1.7677 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaCaixas" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.319, 2.1657, -1.49753 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Transform( 1.00057, 0, 0, 0, 1.00057, 0, 0, 0, 1.00057, -1.05304, 3.05693, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaCaixas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1.00057, 0, 0, 0, 1.00057, 0, 0, 0, 1.00057, -1.05304, 3.05693, 0 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuadro" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.8676, 1.60211, 22.3996 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44239, 7.8465, -0.358356 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuadro"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44239, 7.8465, -0.358356 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPorta1" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.4246, 9.19192, 19.4184 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPorta1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.4246, 9.19192, 19.4184 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPorta2" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8836, 10.4839, -22.5869 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPorta2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8836, 10.4839, -22.5869 )
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPuzzleParede" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62598, 3.09068, -36.5808 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPuzzleParede"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62598, 3.09068, -36.5808 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 0
+
+[node name="DialogPanel" type="Patch9Frame" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 28.0
+margin/top = 421.0
+margin/right = 991.0
+margin/bottom = 584.0
+texture = ExtResource( 5 )
+patch_margin/left = 20
+patch_margin/top = 4
+patch_margin/right = 20
+patch_margin/bottom = 4
+
+[node name="TIE" type="ReferenceFrame" parent="DialogPanel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 942.0
+margin/bottom = 147.0
+script/script = ExtResource( 6 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+SCROLL_ON_MAX_LINES = true
+BREAK_ON_MAX_LINES = true
+AUTO_SKIP_WORDS = true
+LOG_SKIPPED_LINES = true
+SCROLL_SKIPPED_LINES = false
+FONT = ExtResource( 8 )
+PRINT_INPUT = true
+BLINKING_INPUT = true
+INPUT_CHARACTERS_LIMIT = -1
+
+[node name="Inventory" parent="." instance=ExtResource( 9 )]
+
+editor/display_folded = true
+
+[node name="Message" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Label" type="Label" parent="Message"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 295.0
+margin/top = 271.0
+margin/right = 700.0
+margin/bottom = 347.0
+custom_fonts/font = ExtResource( 8 )
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Puzzles" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.56421, 0 )
+
+[node name="puzzleSenha" parent="Puzzles" instance=ExtResource( 10 )]
+
+visibility/visible = false
+script/script = ExtResource( 11 )
+
+[node name="puzzleArmario1Sala3" parent="Puzzles" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="puzzleArmario2Sala3" parent="Puzzles" instance=ExtResource( 13 )]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="piano" parent="Puzzles" instance=ExtResource( 14 )]
+
+editor/display_folded = true
+
+[node name="parede" parent="Puzzles" instance=ExtResource( 15 )]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = false
+
+[node name="Hanaga" parent="." instance=ExtResource( 16 )]
+
+transform/local = Transform( -0.229886, 0, 3.70843, 0, 3.71555, 0, -3.70843, 0, -0.229886, 26.9334, -0.411195, 0.47245 )
+visibility/visible = false
+
+[node name="Expression" parent="Hanaga" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.373988, 0, 0, 0, 0.373988, 0, 0, 0, 0.373988, 0, 3.44807, 0 )
+
+[node name="AreaHanaga" type="Area" parent="Hanaga"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 13 )
+shapes/0/transform = Transform( 1, 0, 1.86265e-09, 0, 0.999999, 0, -1.86265e-09, 0, 1, 0.122251, 0, -0.274283 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Hanaga/AreaHanaga"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 1.86265e-09, 0, 0.999999, 0, -1.86265e-09, 0, 1, 0.122251, 0, -0.274283 )
+shape = SubResource( 13 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Fei" parent="." instance=ExtResource( 18 )]
+
+transform/local = Transform( -0.677212, 0, 0.735788, 0, 1, 0, -0.735788, 0, -0.677212, -13.4401, -0.814103, -31.1327 )
+visibility/visible = false
+
+[node name="Expression" parent="Fei" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.43894, -0.375536, 0.816275, -0.101846, 0.88182, 0.460457, -0.892726, -0.285248, 0.348819, -2.98023e-07, 12.5909, -0.969116 )
+
+[node name="AreaFei" type="Area" parent="Fei"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Transform( 0, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0, -0.797215, 2.11733, -0.956468 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Fei/AreaFei"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0, -0.797215, 2.11733, -0.956468 )
+shape = SubResource( 14 )
+trigger = true
+_update_shape_index = 0
+
+[node name="arina" parent="." instance=ExtResource( 19 )]
+
+editor/display_folded = true
+transform/local = Transform( -2.89799, 0, 0.327958, 0, 2.91649, 0, -0.327958, 0, -2.89799, -13.6004, -1.64686, 31.72 )
+visibility/visible = false
+
+[node name="AreaArina" type="Area" parent="arina"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 15 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="arina/AreaArina"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 15 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Expression" parent="arina" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.373988, 0, 0, 0, 0.373988, 0, 0, 0, 0.373988, 0, 3.44807, 0 )
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="dialog" parent="Canvas" instance=ExtResource( 20 )]
+
+margin/left = 31.0
+margin/top = 412.0
+margin/right = 30.0
+margin/bottom = 40.0
+texture = ExtResource( 5 )
+patch_margin/left = 20
+patch_margin/right = 20
+language = "res://sala3.lan"
+font = SubResource( 16 )
+font_size = 20
+dialog_frame_height = 3
+show_debug_messages = false
+
+[connection signal="body_enter" from="Areas/AreaArmario1" to="." method="_on_AreaArmario1_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaArmario1" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaArmario2" to="." method="_on_AreaArmario2_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaArmario2" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaPlanta" to="." method="_on_AreaPlanta_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPlanta" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaPiano" to="." method="_on_AreaPiano_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPiano" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaMesa" to="." method="_on_AreaMesa_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaMesa" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaMonitor" to="." method="_on_AreaMonitor_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaMonitor" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaPapel" to="." method="_on_AreaPapel_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPapel" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaCaixas" to="." method="_on_AreaCaixas_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaCaixas" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaQuadro" to="." method="_on_AreaQuadro_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuadro" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaPorta1" to="." method="_on_AreaPorta1_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaPorta2" to="." method="_on_AreaPorta2_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaPuzzleParede" to="." method="_on_AreaParede_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPuzzleParede" to="." method="_on_Area_body_exit"]
+
+[connection signal="buff_end" from="DialogPanel/TIE" to="." method="_on_TIE_buff_end"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="body_enter" from="Hanaga/AreaHanaga" to="." method="_on_AreaHanaga_body_enter"]
+
+[connection signal="body_exit" from="Hanaga/AreaHanaga" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Fei/AreaFei" to="." method="_on_AreaFei_body_enter"]
+
+[connection signal="body_exit" from="Fei/AreaFei" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="arina/AreaArina" to="." method="_on_AreaArina_body_enter"]
+
+[connection signal="body_exit" from="arina/AreaArina" to="." method="_on_Area_body_exit"]
+
+[connection signal="dialog_control" from="Canvas/dialog" to="." method="_on_dialog_dialog_control"]
+
+[connection signal="finished" from="Canvas/dialog" to="." method="_on_dialog_finished"]
+
+
+[editable path="Inventory"]
+[editable path="Puzzles/puzzleArmario1Sala3"]
+[editable path="Puzzles/puzzleArmario2Sala3"]
+[editable path="Puzzles/parede"]

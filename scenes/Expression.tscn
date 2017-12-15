@@ -1,0 +1,492 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://scripts/Expression.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/126414__cabeeno-rossley__dialogue-box.smp" type="Sample" id=2]
+[ext_resource path="res://assets/expressions/surprised.png" type="Texture" id=3]
+[ext_resource path="res://assets/expressions/ouch.png" type="Texture" id=4]
+[ext_resource path="res://assets/expressions/what.png" type="Texture" id=5]
+[ext_resource path="res://assets/expressions/angry.png" type="Texture" id=6]
+[ext_resource path="res://assets/expressions/crying.png" type="Texture" id=7]
+[ext_resource path="res://assets/expressions/idea.png" type="Texture" id=8]
+[ext_resource path="res://assets/expressions/swearing.png" type="Texture" id=9]
+[ext_resource path="res://assets/expressions/happy.png" type="Texture" id=10]
+
+[sub_resource type="SampleLibrary" id=1]
+
+samples/exp = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 2 )
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "Exclamation"
+length = 1.2
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 1.2 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "hide_exp"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Expressions:transform/translation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2, 0.4, 1.2 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 2.3, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Expression" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="Sample" type="SpatialSamplePlayer" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 100.0
+params/attenuation/distance_exp = 1.0
+params/emission_cone/degrees = 180.0
+params/emission_cone/attenuation_db = -6.0
+config/polyphony = 1
+config/samples = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/Exclamation = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Expressions" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.281238, 0, 0, 0, 0.281238, 0, 0, 0, 0.281238, 0, 0, 0 )
+
+[node name="exclamation" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 3 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="ouch" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 4 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="questionMark" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="angry" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="crying" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="idea" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="swearing" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 9 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="happy" type="Sprite3D" parent="Expressions"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.63885, 0, 0, 0, 4.63885, 0, 0, 0, 4.63885, 0, 2.30051, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/alpha_cut = 0
+texture = ExtResource( 10 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="Expre" type="Control" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="exclamation" type="TextureFrame" parent="Expre"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="questionMark" type="TextureFrame" parent="Expre"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="angry" type="TextureFrame" parent="Expre"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="crying" type="TextureFrame" parent="Expre"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 7 )
+stretch_mode = 0
+
+[node name="idea" type="TextureFrame" parent="Expre"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="swearing" type="TextureFrame" parent="Expre"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="happy" type="TextureFrame" parent="Expre"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 10 )
+stretch_mode = 0
+
+

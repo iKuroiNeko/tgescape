@@ -1,0 +1,1089 @@
+[gd_scene load_steps=36 format=1]
+
+[ext_resource path="res://scripts/Corredor1.gd" type="Script" id=1]
+[ext_resource path="res://scenes/meshes/corredoe1.scn" type="PackedScene" id=2]
+[ext_resource path="res://assets/puzzles/quadro1.png" type="Texture" id=3]
+[ext_resource path="res://assets/puzzles/quadro2.png" type="Texture" id=4]
+[ext_resource path="res://assets/puzzles/quadro3.png" type="Texture" id=5]
+[ext_resource path="res://assets/puzzles/quadro4.png" type="Texture" id=6]
+[ext_resource path="res://scenes/BauPuzzle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/armario2Puzzle.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/panel.png" type="Texture" id=9]
+[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=10]
+[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=11]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://scenes/meshes/hakuTrue.scn" type="PackedScene" id=13]
+[ext_resource path="res://scripts/camera.gd" type="Script" id=14]
+[ext_resource path="res://scenes/meshes/FEI.scn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Expression.tscn" type="PackedScene" id=16]
+[ext_resource path="res://addons/GodotSTM/simple_text_menu.gd" type="Script" id=17]
+[ext_resource path="res://addons/GodotSTM/GodotSTM_icon.png" type="Texture" id=18]
+[ext_resource path="res://scenes/meshes/hanaga2.scn" type="PackedScene" id=19]
+[ext_resource path="res://addons/SMRT/dialog.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/fonts/Pixel_Berry_08_84_Ltd.Edition.TTF" type="DynamicFontData" id=21]
+[ext_resource path="res://scenes/meshes/arina.scn" type="PackedScene" id=22]
+
+[sub_resource type="Environment" id=1]
+
+ambient_light/enabled = true
+ambient_light/color = Color( 0.196078, 0.184314, 0.12549, 1 )
+ambient_light/energy = 1.0
+fxaa/enabled = false
+background/mode = 1
+background/color = Color( 0, 0, 0, 1 )
+background/energy = 1.0
+background/scale = 1.0
+background/glow = 0.0
+background/canvas_max_layer = null
+glow/enabled = false
+glow/blur_passes = 1
+glow/blur_scale = 1
+glow/blur_strength = 1
+glow/blur_blend_mode = null
+glow/bloom = 0.0
+glow/bloom_treshold = 0.5
+dof_blur/enabled = false
+dof_blur/blur_passes = 1
+dof_blur/begin = 100.0
+dof_blur/range = 10.0
+hdr/enabled = false
+hdr/tonemapper = 0
+hdr/exposure = 0.4
+hdr/white = 1.0
+hdr/glow_treshold = 0.95
+hdr/glow_scale = 0.2
+hdr/min_luminance = 0.4
+hdr/max_luminance = 8.0
+hdr/exposure_adj_speed = 0.5
+fog/enabled = false
+fog/begin = 100.0
+fog/begin_color = Color( 0, 0, 0, 1 )
+fog/end_color = Color( 0, 0, 0, 1 )
+fog/attenuation = 1.0
+fog/bg = true
+bcs/enabled = false
+bcs/brightness = 1.0
+bcs/contrast = 1.0
+bcs/saturation = 1.0
+srgb/enabled = false
+
+[sub_resource type="BoxShape" id=2]
+
+extents = Vector3( 1, 3.33729, 4.44805 )
+
+[sub_resource type="BoxShape" id=3]
+
+extents = Vector3( 0.665536, 4.71674, 3.96259 )
+
+[sub_resource type="BoxShape" id=4]
+
+extents = Vector3( 2.25198, 4.29706, 1.66344 )
+
+[sub_resource type="BoxShape" id=5]
+
+extents = Vector3( 5.22558, 6.75136, 1 )
+
+[sub_resource type="BoxShape" id=6]
+
+extents = Vector3( 2.30924, 2.66566, 3.50914 )
+
+[sub_resource type="BoxShape" id=7]
+
+extents = Vector3( 18.9049, 4.79036, 2.19136 )
+
+[sub_resource type="BoxShape" id=8]
+
+extents = Vector3( 9.91942, 1, 2.08811 )
+
+[sub_resource type="BoxShape" id=9]
+
+extents = Vector3( 9.91942, 1, 1.54631 )
+
+[sub_resource type="BoxShape" id=10]
+
+extents = Vector3( 4.48257, 6.43015, 3.79272 )
+
+[sub_resource type="BoxShape" id=11]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 21 )
+
+[sub_resource type="BoxShape" id=13]
+
+extents = Vector3( 0.645144, 1, 1.24823 )
+
+[node name="Corredor1" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="corredoe1" parent="." instance=ExtResource( 2 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+environment = SubResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.687908, -0.327426, 0.647747, -0.143858, 0.813246, 0.563859, -0.711398, -0.481066, 0.512335, 13.9326, 54.7869, 0 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 0.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="Puzzles" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="QuadroRed" type="TextureFrame" parent="Puzzles"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 97.0
+margin/top = 78.0
+margin/right = 957.0
+margin/bottom = 527.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="QuadroYellow" type="TextureFrame" parent="Puzzles"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 97.0
+margin/top = 78.0
+margin/right = 957.0
+margin/bottom = 527.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="QuadroBlue" type="TextureFrame" parent="Puzzles"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 97.0
+margin/top = 78.0
+margin/right = 957.0
+margin/bottom = 527.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="QuadroGreen" type="TextureFrame" parent="Puzzles"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 97.0
+margin/top = 78.0
+margin/right = 957.0
+margin/bottom = 527.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="BauPuzzle" parent="Puzzles" instance=ExtResource( 7 )]
+
+visibility/visible = false
+
+[node name="armario2Puzzle" parent="Puzzles" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="Panel" parent="Puzzles/armario2Puzzle"]
+
+editor/display_folded = true
+
+[node name="OptionPanel" parent="Puzzles/armario2Puzzle"]
+
+editor/display_folded = true
+
+[node name="SimpleTextMenu" parent="Puzzles/armario2Puzzle/OptionPanel"]
+
+visibility/visible = false
+signal_argument = 1
+
+[node name="Panel" type="Patch9Frame" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 28.0
+margin/top = 421.0
+margin/right = 991.0
+margin/bottom = 584.0
+texture = ExtResource( 9 )
+patch_margin/left = 20
+patch_margin/top = 4
+patch_margin/right = 20
+patch_margin/bottom = 4
+
+[node name="TIE" type="ReferenceFrame" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 942.0
+margin/bottom = 147.0
+script/script = ExtResource( 10 )
+__meta__ = {
+"_editor_icon": ExtResource( 11 )
+}
+SCROLL_ON_MAX_LINES = true
+BREAK_ON_MAX_LINES = true
+AUTO_SKIP_WORDS = true
+LOG_SKIPPED_LINES = true
+SCROLL_SKIPPED_LINES = false
+FONT = ExtResource( 12 )
+PRINT_INPUT = true
+BLINKING_INPUT = true
+INPUT_CHARACTERS_LIMIT = -1
+
+[node name="TIE1" type="ReferenceFrame" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 942.0
+margin/bottom = 147.0
+script/script = ExtResource( 10 )
+__meta__ = {
+"_editor_icon": ExtResource( 11 )
+}
+SCROLL_ON_MAX_LINES = true
+BREAK_ON_MAX_LINES = true
+AUTO_SKIP_WORDS = true
+LOG_SKIPPED_LINES = true
+SCROLL_SKIPPED_LINES = false
+FONT = ExtResource( 12 )
+PRINT_INPUT = true
+BLINKING_INPUT = true
+INPUT_CHARACTERS_LIMIT = -1
+
+[node name="Message" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Label" type="Label" parent="Message"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Areas" type="Spatial" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="AreaQuarto1" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22806, 0, -48.316 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.93026, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuarto1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.93026, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuarto2" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25556, 0, -12.8646 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17698, -1.93026, 0 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuarto2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17698, -1.93026, 0 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+[node name="AreaQuarto3" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22806, 0, 23.9563 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.982292, -1.93026, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuarto3"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.982292, -1.93026, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuarto4" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47642, 0, 59.0893 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.93026, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuarto4"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.93026, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuadroRed" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.526748, 3.70584, 42.9453 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuadroRed"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.526748, 3.70584, 42.9453 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuadro Yellow" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70584, 6.8604 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuadro Yellow"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70584, 6.8604 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuadroGreen" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.0363 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70584, 6.8604 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuadroGreen"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70584, 6.8604 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaQuadroBlue" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -71.2274 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70584, 6.8604 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaQuadroBlue"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70584, 6.8604 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaBau" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0136, -1.33815, -72.1576 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaBau"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0136, -1.33815, -72.1576 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaArmario" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5703, 1.37172, -70.839 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaArmario"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaPlanta" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.41374, -36.0009 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 2
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72415, 0, -3.245 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 6 )
+shapes/1/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48989, 0, 69.0561 )
+shapes/1/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPlanta"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72415, 0, -3.245 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="CollisionShape1" type="CollisionShape" parent="Areas/AreaPlanta"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.48989, 0, 69.0561 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 1
+
+[node name="AreaTriggerFei" type="Area" parent="Areas"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83047, 0, 10.4044 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3823, 0, 0 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaTriggerFei"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3823, 0, 0 )
+shape = SubResource( 7 )
+trigger = true
+_update_shape_index = 0
+
+[node name="AreaPortaCorredor" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2733, 0.766735, 65.5529 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75502, -5.09996, 5.13657 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaPortaCorredor"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75502, -5.09996, 5.13657 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="AreaCorredorTriggerFei" type="Area" parent="Areas"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2733, 0.766735, 65.5529 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75502, -4.24164, -0.548553 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Areas/AreaCorredorTriggerFei"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75502, -4.24164, -0.548553 )
+shape = SubResource( 9 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Haku" parent="." instance=ExtResource( 13 )]
+
+editor/display_folded = true
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9085, -1.53266, 61.2765 )
+
+[node name="Camera" type="Camera" parent="Haku"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.663414, -0.383022, 0.642788, 0.0252013, 0.870002, 0.492404, -0.747828, -0.310468, 0.586824, 46.3409, 40.6939, 41.2929 )
+projection = 1
+size = 45.0
+near = 0.11
+far = 200.0
+keep_aspect = 1
+current = false
+visible_layers = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+script/script = ExtResource( 14 )
+
+[node name="Fei" parent="." instance=ExtResource( 15 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.67, -1.62425, 36.05 )
+
+[node name="Expression" parent="Fei" instance=ExtResource( 16 )]
+
+transform/local = Transform( 0.43894, -0.375536, 0.816275, -0.101846, 0.88182, 0.460457, -0.892726, -0.285248, 0.348819, -2.98023e-07, 12.5909, -0.969116 )
+
+[node name="AreaFei" type="Area" parent="Fei"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212261, 2.11733, 0.336552 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Fei/AreaFei"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212261, 2.11733, 0.336552 )
+shape = SubResource( 10 )
+trigger = true
+_update_shape_index = 0
+
+[node name="OptionPanel" type="Patch9Frame" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 24.0
+margin/top = 17.0
+margin/right = 987.0
+margin/bottom = 180.0
+texture = ExtResource( 9 )
+patch_margin/left = 20
+patch_margin/top = 4
+patch_margin/right = 20
+patch_margin/bottom = 4
+
+[node name="Fei1" type="Control" parent="OptionPanel"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 31.0
+margin/top = 17.0
+margin/right = 668.0
+margin/bottom = 149.0
+script/script = ExtResource( 17 )
+__meta__ = {
+"_editor_icon": ExtResource( 18 )
+}
+options = "Sim... Você tem alguma ideia de onde estamos?
+ONDE ESTOU?? O QUE ESTOU FAZENDO AQUI???
+Quem é você?
+"
+orientation = 1
+offset = 2
+options_font = ExtResource( 12 )
+signal_argument = 1
+initial_option = 0
+cursor_side = 0
+cursor_offset = 0
+blinking_cursor_rate = 0.0
+options_color = Color( 1, 1, 1, 1 )
+cursor_color = Color( 1, 1, 1, 1 )
+menu_enabled = true
+
+[node name="Fei2" type="Control" parent="OptionPanel"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 34.0
+margin/top = 16.0
+margin/right = 217.0
+margin/bottom = 82.0
+script/script = ExtResource( 17 )
+__meta__ = {
+"_editor_icon": ExtResource( 18 )
+}
+options = "Eu sou <nome>
+Não importa."
+orientation = 1
+offset = 2
+options_font = ExtResource( 12 )
+signal_argument = 1
+initial_option = 0
+cursor_side = 0
+cursor_offset = 0
+blinking_cursor_rate = 0.0
+options_color = Color( 1, 1, 1, 1 )
+cursor_color = Color( 1, 1, 1, 1 )
+menu_enabled = true
+
+[node name="Hanaga" parent="." instance=ExtResource( 19 )]
+
+transform/local = Transform( -3.71, 0, -1.20887e-06, 0, 3.71, 0, 1.20887e-06, 0, -3.71, 30.0563, -0.982586, 63.2461 )
+visibility/visible = false
+
+[node name="AreaHanaga" type="Area" parent="Hanaga"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, -5.68434e-14, 0, 1, -1.67283e-07, 0, 0 )
+shapes/0/trigger = true
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Hanaga/AreaHanaga"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 5.68434e-14, 0, 1, 0, -5.68434e-14, 0, 1, -1.67283e-07, 0, 0 )
+shape = SubResource( 11 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="dialog" parent="Canvas" instance=ExtResource( 20 )]
+
+margin/left = 31.0
+margin/top = 412.0
+margin/right = 30.0
+margin/bottom = 40.0
+texture = ExtResource( 9 )
+patch_margin/left = 20
+patch_margin/right = 20
+language = "res://dialog.lan"
+font = SubResource( 12 )
+font_size = 20
+dialog_frame_height = 3
+
+[node name="arina" parent="." instance=ExtResource( 22 )]
+
+transform/local = Transform( -4.74099e-07, 0, 2.91, 0, 2.91, 0, -2.91, 0, -4.74099e-07, 1.31065, -2.46866, 38.9712 )
+visibility/visible = false
+
+[node name="AreaArina" type="Area" parent="arina"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 13 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0568848, 0, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="arina/AreaArina"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0568848, 0, 0 )
+shape = SubResource( 13 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="buff_end" from="Panel/TIE" to="." method="_on_TIE_buff_end"]
+
+[connection signal="input_enter" from="Panel/TIE" to="." method="_on_TIE_input_enter"]
+
+[connection signal="body_enter" from="Areas/AreaQuarto1" to="." method="_on_AreaQuarto1_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaQuarto2" to="." method="_on_AreaQuarto2_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuarto2" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaQuarto3" to="." method="_on_AreaQuarto3_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuarto3" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaQuarto4" to="." method="_on_AreaQuarto4_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaQuadroRed" to="." method="_on_AreaQuadroRed_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuadroRed" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaQuadro Yellow" to="." method="_on_AreaQuadro_Yellow_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuadro Yellow" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaQuadroGreen" to="." method="_on_AreaQuadroGreen_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuadroGreen" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaQuadroBlue" to="." method="_on_AreaQuadroBlue_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaQuadroBlue" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaBau" to="." method="_on_AreaBau_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaBau" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaArmario" to="." method="_on_AreaArmario_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaArmario" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaPlanta" to="." method="_on_AreaPlanta_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPlanta" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaTriggerFei" to="." method="_on_AreaTriggerFei_body_enter"]
+
+[connection signal="body_enter" from="Areas/AreaPortaCorredor" to="." method="_on_AreaPortaCorredor_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaPortaCorredor" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Areas/AreaCorredorTriggerFei" to="." method="_on_AreaCorredorTriggerFei_body_enter"]
+
+[connection signal="body_exit" from="Areas/AreaCorredorTriggerFei" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Fei/AreaFei" to="." method="_on_AreaFei_body_enter"]
+
+[connection signal="body_exit" from="Fei/AreaFei" to="." method="_on_Area_body_exit"]
+
+[connection signal="body_enter" from="Hanaga/AreaHanaga" to="." method="_on_AreaHanaga_body_enter"]
+
+[connection signal="body_exit" from="Hanaga/AreaHanaga" to="." method="_on_Area_body_exit"]
+
+[connection signal="dialog_control" from="Canvas/dialog" to="." method="_on_dialog_dialog_control"]
+
+[connection signal="finished" from="Canvas/dialog" to="." method="_on_dialog_finished"]
+
+[connection signal="body_enter" from="arina/AreaArina" to="." method="_on_AreaArina_body_enter"]
+
+[connection signal="body_exit" from="arina/AreaArina" to="." method="_on_Area_body_exit"]
+
+
+[editable path="Puzzles/armario2Puzzle"]
